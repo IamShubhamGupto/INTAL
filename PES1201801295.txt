@@ -1,16 +1,3 @@
-﻿1. Introduction
-	i. What is an intal?
-		Intal is an character array that can be used to represent numbers too big to be represented by primitive datatypes. It begins with the most most significant bit of the number as the zeroth element and ends with a '\0' character.
-
-	ii. How is it different from an integer in general and integer data types supported by C?
-		The most basic difference would be that all intals are allocated in the heap unlike integers in C. The other difference would be the far superior range of intals.
-
-	iii. Applications of intal.
-		Would definitely be used where large numbers cannot be estimated. ex: Rocket science.
-
-2. Approach
-	a. Your approach in implementing the functionalities of intal.
-		Most of my basic intal functions work using a helper function named <actual_function>+"er"/"y". I have tried to abstaine from using recursive functions as there are chances of exceeding stack depth in edge cases. With an exception to GCD and intal_mod. Remaining all my implementations are based on iterative approaches.
 char* intal_add(const char* intal1, const char* intal2)
     • Compare both intals, pass the larger intal as intal1 to the helper function intal_adder. 
     • intal_add creates a new char pointer size of larger intal + 2
@@ -110,12 +97,3 @@ char* coin_row_problem(char **arr, int n)
     • curr is now next
     • free prev if prev not equal curr
     • return curr
-
-Future work 
-	a. Any more functionalities you think that can be included in the intal library?
-		Yes. Adding the ability of intal to represent decimal digits ex: 10000000000.8237821734919023.
-		I would try to implement negative intals. Each intal would now have a sign bit at MSB, just like in computers.
-		Division algorithm, constraint = remainder is zero
-
-	b. If you had no restrictions, how would you implement a library to handle integers of arbitrary length?
-		I would mostly try something similar even with no restrictions. I would have implemented it with structs.
